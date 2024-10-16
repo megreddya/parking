@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Entry</title>
+    <link rel="stylesheet" href="entrystyles.css">
+</head>
+<body>
+    <header>
+        <h1>Park Your Vehicle</h1>
+    </header>
+    <div class="container">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="exit.html">Exit Booking</a>
+            <a href="status.html">Status of Slots</a>
+        </nav>
+    </div>
+    <main>
+        <div id="entry-form-section">
+            <h2>Entry Form</h2>
+            <form id="entry-form">
+                <input type="text" id="user-id" placeholder="User ID (Required)" required>
+                <input type="text" id="user-name" placeholder="Name" required>
+                <input type="text" id="vehicle-number" placeholder="Vehicle Number" required>
+                <button type="submit">Book Slot</button>
+            </form>
+        </div>
+        <div class="slots-container" id="available-slots">
+            <!-- Slots will be dynamically generated here -->
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

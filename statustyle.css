@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set body styles */
+body {
+background-image: url('images/car-background.jpeg');
+background-size: cover; /* Cover the entire viewport */
+background-position: center; /* Center the background image */
+background-repeat: no-repeat; /* Prevent the background image from repeating */
+font-family: 'Arial', sans-serif;
+color: #333;
+height: 100vh; /* Ensure the body takes up the full viewport height */
+margin: 0; /* Remove default margin */
+}
+
+/* Header styles */
+header {
+    background: #007BFF; /* Blue background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* White with slight transparency */
+    padding: 10px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: #000000; /* Text color for links */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 15px;
+    border: 3px solid #007BFF; /* Border matching the text color */
+    border-radius: 5px; /* Rounded corners for buttons */
+    background: rgb(72, 234, 255); /* Background for buttons */
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    margin: 0 10px; /* Space between buttons */
+}
+
+nav a:hover {
+    transform: scale(1.08); /* Slightly enlarge on hover */
+}
+
+/* Main Container */
+.container {
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 800px; /* Max width for the content */
+    width: 90%; /* Responsive width */
+    margin: 20px auto; /* Center the container with auto margins */
+    display: flex; /* Flexbox to allow centering of children */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+}
+
+.container h1 {
+    font-size: 2rem;
+    color: #2980b9; /* Sky blue color */
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Slots Container */
+.slots-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* 10 columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    gap: 1.5rem; /* Space between slots */
+    padding: 2rem;
+    margin: 1.5rem auto; /* Center the container */
+    border: 7px solid black;
+    width: 90%; /* Adjust width as needed to fit 10 columns */
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual Slot Box */
+/* Individual Slot Box */
+.slot {
+    background-color: #04af1b; /* Green color for available slots */
+    color: white;
+    display: flex;
+    flex-direction: column; /* Stack the text and button vertically */
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 1rem; /* Add padding for spacing inside the slot */
+    height: 100%; /* Make sure the slots take full height of grid */
+    box-sizing: border-box; /* Include padding in height calculation */
+}
+
+.slot.booked {
+    background-color: #ff0000; /* Red for booked slots */
+}
+
+/* Button Styles */
+.details-button {
+    margin-top: 0.5rem; /* Add space between text and button */
+    padding: 0.5rem 1rem; /* Padding for the button */
+    background-color: #ffef0f; /* White background for button */
+    color: #000000; /* Text color for button */
+    border: none; /* No border for button */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background 0.3s, color 0.3s;
+}
+
+.details-button:hover {
+    transform: scale(1.05);
+    color: rgb(0, 0, 0); /* Change text color on hover */
+}

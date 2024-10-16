@@ -1,0 +1,150 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-image: url('images/car-exit.jpg');
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    height: 100vh; /* Full height */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center elements horizontally */
+    justify-content: flex-start; /* Align to top */
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent sky blue */
+    color: white;
+    padding: 1.5rem;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* White with slight transparency */
+    padding: 10px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: #000000; /* Text color for links */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 15px;
+    border: 3px solid #007BFF; /* Border matching the text color */
+    border-radius: 5px; /* Rounded corners for buttons */
+    background: rgb(72, 234, 255); /* Background for buttons */
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    margin: 0 10px; /* Space between buttons */
+}
+
+nav a:hover {
+    transform: scale(1.08); /* Slightly enlarge on hover */
+}
+
+/* Main Container */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 800px; /* Max width for the content */
+    width: 90%; /* Responsive width */
+    margin: 20px auto; /* Center the container with auto margins */
+    display: flex; /* Flexbox to allow centering of children */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+}
+
+.container h1 {
+    font-size: 2rem;
+    color: #2980b9; /* Sky blue color */
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Booked Vehicles Section */
+#booked-vehicles {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Gap between vehicles */
+}
+
+/* Individual Vehicle Box */
+.vehicle {
+    background-color: #09c522; /* Green color for booked vehicles */
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between text and button */
+    align-items: center; /* Center align items vertically */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 10px; /* Space between each vehicle entry */
+}
+
+/* Vehicle Info Styling */
+.info {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center align items vertically */
+    margin-right: auto; /* Push the button to the right */
+}
+
+/* Delete Button */
+button {
+    padding: 0.5rem 1rem;
+    background-color: #ff1900; /* Red color for exit button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #f32812; /* Darker red on hover */
+    transform: scale(1.05); /* Slight scale-up on hover */
+}
+
+/* No vehicles message */
+#booked-vehicles p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px 0; /* Margin for stacked links */
+        width: 100%; /* Full width for links */
+        text-align: center;
+    }
+}

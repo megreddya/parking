@@ -1,0 +1,203 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url('images/car-entry.jpg');
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    color: #333;
+    height: 100vh; /* Ensure the body takes up the full viewport height */
+}
+
+/* Ensure full height */
+html, body {
+    height: 100%;
+}
+
+/* Header */
+header {
+    background-color: #007BFF; /* Sky blue shade */
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+header {
+    background: #007BFF; /* Blue background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* White with slight transparency */
+    padding: 10px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: #000000; /* Text color for links */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 15px;
+    border: 3px solid #007BFF; /* Border matching the text color */
+    border-radius: 5px; /* Rounded corners for buttons */
+    background: rgb(72, 234, 255); /* Background for buttons */
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    margin: 0 10px; /* Space between buttons */
+}
+
+nav a:hover {
+    transform: scale(1.08); /* Slightly enlarge on hover */
+}
+
+/* Main Container */
+.container {
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 800px; /* Max width for the content */
+    width: 90%; /* Responsive width */
+    margin: 20px auto; /* Center the container with auto margins */
+    display: flex; /* Flexbox to allow centering of children */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+}
+
+.container h1 {
+    font-size: 2rem;
+    color: #2980b9; /* Sky blue color */
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+/* Main Layout */
+main {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between form and slots */
+    padding: 5px; /* Padding for the main area */
+}
+
+/* Form Section */
+#entry-form-section {
+    background-color: #dfc1dc; /* Light sky blue */
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 7px solid rgb(0, 0, 0);
+    margin: 1.5rem;
+    width: 30%; /* 1/3 of the available space */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+#entry-form-section h2 {
+    font-size: 3rem;
+    color: #9a00c9;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#entry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+input {
+    padding: 1.5rem; /* Increased padding for larger input size */
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    font-size: 1.2rem; /* Increased font size for better visibility */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #671dbb;
+    outline: none;
+    box-shadow: 0px 0px 20px rgba(41, 128, 185, 0.5);
+}
+
+button {
+    padding: 1rem 2rem; /* Increased padding for larger button size */
+    background-color: #ff00c8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem; /* Increased font size for better visibility */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #04971c;
+    box-shadow: 0px 0px 20px rgba(20, 202, 66, 0.5);
+    transform: scale(1.05); /* Slight scale-up on hover */
+}
+
+/* Slots Container */
+.slots-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    grid-template-rows: repeat(4, 120px); /* 4 rows */
+    gap: 1.5rem;
+    padding: 2rem;
+    margin: 1.5rem;
+    border: 7px solid black;
+    width: 65%; /* 2/3 of the available space */
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual Slot Box */
+.slot {
+    background-color: #049918; /* Green color for available slots */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.slot.booked {
+    background-color: #ff0000; /* Red for booked slots */
+}
+
+.slot:hover {
+    transform: scale(1.05); /* Scale on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Add shadow on hover */
+}
+
+.slot.selected {
+    border: 6px solid yellow; /* Highlight selected slot */
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .slots-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+    
+    #entry-form-section {
+        width: 90%; /* Full width on smaller screens */
+    }
+}
