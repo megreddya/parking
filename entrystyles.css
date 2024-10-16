@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image: url('images/car-entry.jpg');
+    background-image: url('car-entry.jpg');
     background-size: cover; /* Cover the entire viewport */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
