@@ -79,8 +79,8 @@ nav a:hover {
 /* Slots Container */
 .slots-container {
     display: grid;
-    grid-template-columns: repeat(10, 1fr); /* 10 columns */
-    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    grid-template-columns: repeat(5, 1fr); /* 10 columns */
+    grid-template-rows: repeat(4, 1fr); /* 2 rows */
     gap: 1.5rem; /* Space between slots */
     padding: 2rem;
     margin: 1.5rem auto; /* Center the container */
